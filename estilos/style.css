@@ -35,7 +35,7 @@ header {
 
 header .contenedor{
     position: relative;
-    height: 800px;
+    height: 700px;
 }
 
 header .menu {
@@ -44,7 +44,7 @@ header .menu {
 }
 /* en este header menu de cambia el menu de acerca etc,  cambios de color, cosicion tamaño*/
 header .menu a {
-    color: #000000;
+    color: #ffffff;
     font-size: 20px;
     font-weight: 300;
     display: inline-block;
@@ -54,14 +54,14 @@ header .menu a {
 }
 header .menu a:hover {
     text-decoration: underline;
-    color: black;
+   
 }
 /* en esta etiqueta cambiamos el color tamaño y letra del textp*/
 header .texto {
     width: 100%;
-    color: #000000;
+    color: #ffffff;
     position: absolute;
-    top: 40%;
+    top: 50%;
     margin-top: -52px;
 }
 
@@ -77,7 +77,7 @@ header .texto .nombre span {
 
 header .texto h3 {
     font-weight: 300;
-    font-size: 20px;
+    font-size: 25px;
     font-style: italic;
 }
 
@@ -94,12 +94,12 @@ header .texto h3 {
 }
 
 .main .acerca-de .foto {
-    width: 100%;
+    width: 80%;
     position: absolute;
-    left: 300;
-    top: 50px;
+    left: 0;
+    top: -50px;
     z-index: 0;
-    box-shadow: 0px 0px 15px rgba(152, 14, 14, 0.35);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.35);
 }
 
 .main .acerca-de .foto img {
@@ -113,10 +113,9 @@ header .texto h3 {
     width: 50%;
     position: relative;
     top: 500px;
-
     z-index: 1;
     float: right;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.923);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.35);
 }
 
 .main .acerca-de article h3 {
@@ -126,11 +125,11 @@ header .texto h3 {
 }
 
 .main .acerca-de article p {
-    line-height: 28px;
-    margin-bottom: 15px;
+    line-height: 20px;
+    margin-bottom: 15px;
 }
 .main .menu {
-    padding-top: 570%;
+    padding-top: 570px;
     margin-bottom: 50px;
 }
 .main .menu .titulo {
@@ -140,11 +139,12 @@ header .texto h3 {
     margin-bottom: 40px;
 }
 .main .menu .contenedor-menu,
-.maim .menu .contenedor-menu2{
+.main .menu .contenedor-menu2{
     border: 1px solid black;
     background: transparent;
     padding: 10px;
     overflow: hidden;
+   
 
 }
 .main .menu article{
@@ -164,7 +164,7 @@ header .texto h3 {
     border-bottom: 4px dotted black;
     overflow: hidden;
 }
-.maim .menu .nombre{
+.main .menu .nombre{
     font-size: 20px;
     margin-bottom: 15px;
     float: left;
@@ -174,17 +174,17 @@ header .texto h3 {
     margin-bottom: 15px;
     float: right;
 }
-.main . menu .descripcion{
+.main .menu .descripcion{
     font-size: 16px;
-    color: darkgrey;
+    color: #676767;
     clear: both;
 }
 .main .galeria{
     overflow: hidden;
 }
-.maim .galeria .foto{
+.main .galeria .foto{
     width: 25%;
-    float: left;
+    float: right;
 }
 .main .galeria .foto img{
     width: 100%;
@@ -197,6 +197,7 @@ header .texto h3 {
     -o-transition: all .3s ease;
     transition: all .3s ease;
 }
+/*-----------main ubicacion---------------*/
 .main .ubicacion{
     background: #ffffff;
     padding: 60px 0;
@@ -222,7 +223,7 @@ header .texto h3 {
    overflow: hidden; 
 }
 
-.main.ubicacion.direcion.calle {
+.main .ubicacion .direcion .calle {
     margin-bottom: 15px;
 }
 
@@ -257,7 +258,7 @@ main .mapa iframe{
 }
 
 /*---------------FOOTER-----------------*/
-Footer {
+footer {
     background: #000000
 }
 
@@ -265,4 +266,86 @@ footer .copyright {
     text-align: center;
     padding: 15px 0;
     color: #ffffff;
+}
+/*------------------------main queries--------------*/
+@media screen and (max-width: 800px){
+header .contenedor{
+        position: static;
+        height: auto;
+    }
+
+header .texto{
+        position: static;
+        margin: 100px 0;
+    }
+
+header .menu{
+        text-align: center;;
+    }
+header .menu a{
+        margin: 10px 20px;
+    }
+header .texto .nombre{
+        font-size: 30px;
+    }
+
+header .texto h3{
+        font-size: 18px;
+    }
+
+.main .acerca-de .foto{
+        width: 100%;
+        position: relative;
+    }
+.main .acerca-de article{
+        position: relative;
+        width: 100%;
+        top: -50px;
+        transform: translate(0px, 0);
+    }
+
+.main .menu{
+        padding-top: 300px;
+    }
+
+.main .menu article{
+        width: 100%;
+    }
+
+.main .galeria .foto{
+        width: 50%;
+    }
+
+.main .mapa{
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 400px){
+   
+.main .acerca-de article h3{
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+
+.main .menu article .nombre,
+.main .menu article .precio{
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+.main .galeria .foto{
+        width: 100%;
+    }
+
+.main .ubicacion .direccion{
+        margin-bottom: 15px;
+    }
+.main .ubicacion .direccion,
+.main .ubicacion .horarios{
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
 }
